@@ -1,0 +1,12 @@
+sources:
+  - ./FoundationExtension/
+templates:
+  - Carthage/Checkouts/FataMorgana/Template/Mock.stencil
+output: 
+  ./FoundationExtension/mocks/generated/
+args:
+  # testableModule: "FoundationExtension"
+  imports:
+    - CoreLocation
+  returnEmptyArray: false
+  returnEmptyDict: false

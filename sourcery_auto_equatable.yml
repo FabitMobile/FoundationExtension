@@ -1,0 +1,7 @@
+sources:
+  - ./FoundationExtension/
+templates:
+  - AutoEquatable.stencil
+output: 
+  ./FoundationExtension/
+args:

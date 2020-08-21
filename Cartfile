@@ -1,0 +1,5 @@
+github "mxcl/PromiseKit" ~> 6.0
+github "evgenyneu/keychain-swift" ~> 19.0
+github "jdg/MBProgressHUD" == 1.1.0
+github "valnoc/Mirage" ~> 2.0
+github "valnoc/FataMorgana" ~> 2.0
