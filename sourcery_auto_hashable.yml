@@ -1,7 +1,0 @@
-sources:
-  - ./FoundationExtension/
-templates:
-  - AutoHashable.stencil
-output: 
-  ./FoundationExtension/
-args:

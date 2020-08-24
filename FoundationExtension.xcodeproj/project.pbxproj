@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03869844BA9A385303DCF73F /* UserNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67DFF14BCF7B0E994A631EC /* UserNotificationHandler.swift */; };
 		06597B4296B9A708014AC705 /* DateFormatterExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA6BBE64EF876726A095BBC /* DateFormatterExt.swift */; };
-		0719C333641E4F06A8A52E15 /* MockApplePayService.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BF17AF3609E54BBCCCE4D /* MockApplePayService.generated.swift */; };
 		0E7402D0879E90C598B3923A /* BasicAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66EC216C559B3AD1FFFAC0 /* BasicAuthService.swift */; };
 		1DF3CDF00F38CF286B316C62 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E7C4239D5A18ACC3C9CB5 /* PushNotification.swift */; };
 		21503C0F48E472D873C4E0A9 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F958AF45D0FF89D0C27BC4 /* PromiseKit.framework */; };
@@ -23,13 +22,10 @@
 		3B51FCF7198C81F5E931F131 /* BaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A8D50AA88C9580E645221C /* BaseAuthService.swift */; };
 		41BA1D31BBEBCDEEDD89AB1B /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD50F12E61AF5F49468E0D8 /* DialogService.swift */; };
 		41D08011CFEC0A22659B61F1 /* ApplePayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053C498B4570B6E12F8DF6C /* ApplePayService.swift */; };
-		442A291FB9083A8CF5B88FC9 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E536D62551D6A3585AA261E /* AutoEquatable.generated.swift */; };
 		47D6B9EB2D9627A5A204697F /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC68F18CC6431084EAB702 /* StringExt.swift */; };
 		4AEF7BDE30E37D699CDE7D55 /* AVPlayerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB73081B94DB471502DA041 /* AVPlayerExt.swift */; };
-		4D2879264D406BBCFB15FEBB /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7E9D4EE608B79961229E5 /* AutoHashable.generated.swift */; };
 		5490CBDD72ED2FBE8BC5E903 /* OldUserNotificationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50EA3A2C24762476D6FD629 /* OldUserNotificationServiceImpl.swift */; };
 		5FA409A19105214B06757742 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E040AD229EB42D1DF70DE4 /* AnyEncodable.swift */; };
-		6906687C21CDE6FD7E2B04D4 /* MockApplePayTransaction.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588FF79F3931ED5B639AE27B /* MockApplePayTransaction.generated.swift */; };
 		69E813B3973AC922B6F76DA6 /* ApplePayTransaction10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85DFBFE67266764009AD76 /* ApplePayTransaction10.swift */; };
 		6D5699907B8042CE63B7CABB /* DialogServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37688D22544B44E0AF56536F /* DialogServiceImpl.swift */; };
 		6FB5D6FCDB77C5BD95ED860B /* HTTPCookieStorageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646B072D211E16239B31AC5C /* HTTPCookieStorageExt.swift */; };
@@ -48,8 +44,6 @@
 		C2C82CB2A7C8299FF95B88B2 /* ApplePayBaseTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19ACA70B86FD8B3D18897B3 /* ApplePayBaseTransaction.swift */; };
 		C3A9FAC7A44823F5296CCA7C /* ApplePayServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD49D3720E0FA94617659A3 /* ApplePayServiceImpl.swift */; };
 		C518AD06C73AE1C2BA14C2D2 /* ApplePayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEF6692E5F203571B454E3 /* ApplePayResponse.swift */; };
-		C8517F42564AD95BBB6A8E94 /* MockOAuth2Service.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EC331597FEF7767B2506B /* MockOAuth2Service.generated.swift */; };
-		C8E8ABB45D5C6CAB7880183C /* MockLocationService.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A270E55F40005D16A95DA01 /* MockLocationService.generated.swift */; };
 		CBDE3DEBDA2C6A27B5B65276 /* SequenceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C4C7E59F731A4816E88006 /* SequenceExt.swift */; };
 		CD0B2E6A1560C631ABBA1A77 /* UserNotificationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA773178AFB7769F3F025A /* UserNotificationServiceImpl.swift */; };
 		CD81EB3873FB73472214E22D /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4ED2A4AD2F13657C2D0DC2 /* Atomic.swift */; };
@@ -57,11 +51,9 @@
 		E13291E467B189D279B44C82 /* ApplePayTransaction9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD0E8266B834064724BF6F /* ApplePayTransaction9.swift */; };
 		E9CC8842E1070AD716A6CDF0 /* TokenAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5000A07EE725723318EA4F9A /* TokenAuthService.swift */; };
 		EAF24365ABC24AE253536871 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3AF1607F9023FF08BB7FE /* LocationService.swift */; };
-		EC75EF99D91F262A8EB04C46 /* MockUserNotificationService.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031C19D3D7B2A17DC3C77D5 /* MockUserNotificationService.generated.swift */; };
 		EE02714AE370EF95F9B613A8 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACD45AF349A983199A9351C /* URLExtension.swift */; };
 		EEDE4D3B4EB7BCC8D2D06FB3 /* DateStringIsoExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47E5799D6CCA7B344E8CCE /* DateStringIsoExt.swift */; };
 		F32A31E3570A3F7C6DE7A57C /* ApplePayTransaction11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB088F712CF22A1162842 /* ApplePayTransaction11.swift */; };
-		F4FD6D929896B01701BE00C9 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4237824CEB3B5C3E9CC7F23C /* Any.swift */; };
 		F5D9FE2220942662794D6381 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661CAA86A64B8403F4923286 /* Functions.swift */; };
 		F7518408818B666E26FB8BBB /* UIApplicationDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2CA6B19084FD18BBC5F31 /* UIApplicationDelegateExt.swift */; };
 /* End PBXBuildFile section */
@@ -69,27 +61,20 @@
 /* Begin PBXFileReference section */
 		06CAE28ED66D07610741E8CF /* OAuth2Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Credentials.swift; sourceTree = "<group>"; };
 		0CDD0E8266B834064724BF6F /* ApplePayTransaction9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayTransaction9.swift; sourceTree = "<group>"; };
-		0F0BF17AF3609E54BBCCCE4D /* MockApplePayService.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplePayService.generated.swift; sourceTree = "<group>"; };
-		1031C19D3D7B2A17DC3C77D5 /* MockUserNotificationService.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserNotificationService.generated.swift; sourceTree = "<group>"; };
 		11D6B212A3181E9B04E8E440 /* ApplePayServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayServiceItem.swift; sourceTree = "<group>"; };
 		12C4C7E59F731A4816E88006 /* SequenceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExt.swift; sourceTree = "<group>"; };
 		1A4ED2A4AD2F13657C2D0DC2 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		1DE2CA6B19084FD18BBC5F31 /* UIApplicationDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationDelegateExt.swift; sourceTree = "<group>"; };
-		2A270E55F40005D16A95DA01 /* MockLocationService.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.generated.swift; sourceTree = "<group>"; };
 		2BA6BBE64EF876726A095BBC /* DateFormatterExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExt.swift; sourceTree = "<group>"; };
 		2E305CDC646F6B613A5365CF /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainSwift.framework; sourceTree = "<group>"; };
-		2E536D62551D6A3585AA261E /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		2E65130C1BD70819ACC51BD0 /* ApplePayTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayTransaction.swift; sourceTree = "<group>"; };
 		2F6F06B3317248C26B97C811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2FF63F08C390BD698F8F1CA6 /* ApnsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApnsHandler.swift; sourceTree = "<group>"; };
-		327EC331597FEF7767B2506B /* MockOAuth2Service.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOAuth2Service.generated.swift; sourceTree = "<group>"; };
 		37688D22544B44E0AF56536F /* DialogServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogServiceImpl.swift; sourceTree = "<group>"; };
 		407FB088F712CF22A1162842 /* ApplePayTransaction11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayTransaction11.swift; sourceTree = "<group>"; };
-		4237824CEB3B5C3E9CC7F23C /* Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		49F6358E089A8B8D4267594D /* PluralSrtingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluralSrtingExtension.swift; sourceTree = "<group>"; };
 		4ACD45AF349A983199A9351C /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		5000A07EE725723318EA4F9A /* TokenAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAuthService.swift; sourceTree = "<group>"; };
-		588FF79F3931ED5B639AE27B /* MockApplePayTransaction.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplePayTransaction.generated.swift; sourceTree = "<group>"; };
 		5D187ABBA287A69E3CFC7E50 /* UserNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationService.swift; sourceTree = "<group>"; };
 		646B072D211E16239B31AC5C /* HTTPCookieStorageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCookieStorageExt.swift; sourceTree = "<group>"; };
 		661CAA86A64B8403F4923286 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -104,7 +89,6 @@
 		812033C3AE376CCC1D00F6B9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		81671834B5E3164F18B7DF68 /* OAuth2Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Service.swift; sourceTree = "<group>"; };
 		8B47E5799D6CCA7B344E8CCE /* DateStringIsoExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringIsoExt.swift; sourceTree = "<group>"; };
-		91F7E9D4EE608B79961229E5 /* AutoHashable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.generated.swift; sourceTree = "<group>"; };
 		9E85DFBFE67266764009AD76 /* ApplePayTransaction10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayTransaction10.swift; sourceTree = "<group>"; };
 		A26E7C4239D5A18ACC3C9CB5 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		B12D0A6ACC13229471D60BCC /* InMemoryTokenAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryTokenAuthService.swift; sourceTree = "<group>"; };
@@ -151,10 +135,7 @@
 				415B63165088B85DB20FA4D0 /* DialogService */,
 				873AE701FA194D2CA68AFB52 /* Extensions */,
 				5487AF3EF51CCB0012E07CFA /* LocationService */,
-				BE735E30C21FAD1E361E001D /* mocks */,
 				DEE0F139D01AA1E1636AE116 /* UserNotificationService */,
-				2E536D62551D6A3585AA261E /* AutoEquatable.generated.swift */,
-				91F7E9D4EE608B79961229E5 /* AutoHashable.generated.swift */,
 				2F6F06B3317248C26B97C811 /* Info.plist */,
 			);
 			path = FoundationExtension;
@@ -274,15 +255,6 @@
 			path = Carthage/Build;
 			sourceTree = "<group>";
 		};
-		BE735E30C21FAD1E361E001D /* mocks */ = {
-			isa = PBXGroup;
-			children = (
-				E0C0766473E4476332DF6868 /* generated */,
-				4237824CEB3B5C3E9CC7F23C /* Any.swift */,
-			);
-			path = mocks;
-			sourceTree = "<group>";
-		};
 		C5AF27CA58454939D1C97543 /* TokenAuthService */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,18 +302,6 @@
 			path = UserNotificationService;
 			sourceTree = "<group>";
 		};
-		E0C0766473E4476332DF6868 /* generated */ = {
-			isa = PBXGroup;
-			children = (
-				0F0BF17AF3609E54BBCCCE4D /* MockApplePayService.generated.swift */,
-				588FF79F3931ED5B639AE27B /* MockApplePayTransaction.generated.swift */,
-				2A270E55F40005D16A95DA01 /* MockLocationService.generated.swift */,
-				327EC331597FEF7767B2506B /* MockOAuth2Service.generated.swift */,
-				1031C19D3D7B2A17DC3C77D5 /* MockUserNotificationService.generated.swift */,
-			);
-			path = generated;
-			sourceTree = "<group>";
-		};
 		F037CFF7FC7262FA57058C87 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,9 +320,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DE1B63D678958EC5A8503B0 /* Build configuration list for PBXNativeTarget "FoundationExtension" */;
 			buildPhases = (
-				FBECAE4E7BEC77DE60DAB7EB /* Run Script. Generate Equtables */,
-				F5D0CE864B1F3EE163DAE752 /* Run Script. Generate Hashable */,
-				871A4982B1DDFF30C912E07B /* Run Script. Generate Mock */,
 				00B826488FAFE62D55FDB3D7 /* Sources */,
 				5F1DED3472C789065776FDFE /* Frameworks */,
 			);
@@ -405,63 +362,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		871A4982B1DDFF30C912E07B /* Run Script. Generate Mock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script. Generate Mock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_mocks.yml\"\n";
-		};
-		F5D0CE864B1F3EE163DAE752 /* Run Script. Generate Hashable */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script. Generate Hashable";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_auto_hashable.yml\"\n";
-		};
-		FBECAE4E7BEC77DE60DAB7EB /* Run Script. Generate Equtables */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script. Generate Equtables";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --disableCache --config \"${SRCROOT}/sourcery_auto_equatable.yml\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		00B826488FAFE62D55FDB3D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -469,7 +369,6 @@
 			files = (
 				4AEF7BDE30E37D699CDE7D55 /* AVPlayerExt.swift in Sources */,
 				8C8364C30E841A7FC6A6FE3A /* Any+Mutation.swift in Sources */,
-				F4FD6D929896B01701BE00C9 /* Any.swift in Sources */,
 				5FA409A19105214B06757742 /* AnyEncodable.swift in Sources */,
 				BD0B4987D60F3B54038A8F4E /* ApnsHandler.swift in Sources */,
 				C2C82CB2A7C8299FF95B88B2 /* ApplePayBaseTransaction.swift in Sources */,
@@ -482,8 +381,6 @@
 				F32A31E3570A3F7C6DE7A57C /* ApplePayTransaction11.swift in Sources */,
 				E13291E467B189D279B44C82 /* ApplePayTransaction9.swift in Sources */,
 				CD81EB3873FB73472214E22D /* Atomic.swift in Sources */,
-				442A291FB9083A8CF5B88FC9 /* AutoEquatable.generated.swift in Sources */,
-				4D2879264D406BBCFB15FEBB /* AutoHashable.generated.swift in Sources */,
 				3B51FCF7198C81F5E931F131 /* BaseAuthService.swift in Sources */,
 				B60BDF319DCD52CE7F78E91D /* BasicAuthCredentials.swift in Sources */,
 				0E7402D0879E90C598B3923A /* BasicAuthService.swift in Sources */,
@@ -498,11 +395,6 @@
 				6FB5D6FCDB77C5BD95ED860B /* HTTPCookieStorageExt.swift in Sources */,
 				85AA4812189F142788DF06C7 /* InMemoryTokenAuthService.swift in Sources */,
 				EAF24365ABC24AE253536871 /* LocationService.swift in Sources */,
-				0719C333641E4F06A8A52E15 /* MockApplePayService.generated.swift in Sources */,
-				6906687C21CDE6FD7E2B04D4 /* MockApplePayTransaction.generated.swift in Sources */,
-				C8E8ABB45D5C6CAB7880183C /* MockLocationService.generated.swift in Sources */,
-				C8517F42564AD95BBB6A8E94 /* MockOAuth2Service.generated.swift in Sources */,
-				EC75EF99D91F262A8EB04C46 /* MockUserNotificationService.generated.swift in Sources */,
 				BBAE8F9773B5E859DAB209FA /* NotificationPermissions.swift in Sources */,
 				22B7E45B1BEE0BC325CDFE6F /* OAuth2Credentials.swift in Sources */,
 				3A70EF4DFEECFF8BF262F966 /* OAuth2Service.swift in Sources */,
