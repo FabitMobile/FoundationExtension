@@ -1,10 +1,11 @@
 import Foundation
 
-public class Atomic<T> {
+@propertyWrapper
+public final class Atomic<T> {
     private let semaphore = DispatchSemaphore(value: 1)
     private var _value: T
 
-    public var value: T {
+    public var wrappedValue: T {
         get {
             wait()
             let result = _value
@@ -43,7 +44,7 @@ public class Atomic<T> {
         semaphore.signal()
     }
 
-    public init(value: T) {
-        _value = value
+    public init(wrappedValue: T) {
+        _value = wrappedValue
     }
 }
