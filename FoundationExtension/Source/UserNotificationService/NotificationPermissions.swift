@@ -21,6 +21,8 @@ public enum NotificationsPermissionStatus {
             self = .allowed
         case .notDetermined, .denied:
             self = .denied
+        @unknown default:
+            self = .denied
         }
     }
 }
