@@ -10,6 +10,14 @@ public extension Date {
 }
 
 public extension Date {
+    func convertToTimeZone(_ timeZone: TimeZone) -> Date {
+         let localDeviceTimeZone = TimeZone.current
+         let delta = TimeInterval(timeZone.secondsFromGMT(for: self) - localDeviceTimeZone.secondsFromGMT(for: self))
+         return addingTimeInterval(delta)
+    }
+}
+
+public extension Date {
     var calendar: Calendar {
         Calendar.current
     }
