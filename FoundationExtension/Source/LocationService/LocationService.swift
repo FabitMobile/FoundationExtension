@@ -46,6 +46,9 @@ open class LocationServiceImpl: NSObject, LocationService, CLLocationManagerDele
         self.notificationCenter = notificationCenter
         locationManager = CLLocationManager()
         lastLocation = locationManager.location
+        
+        super.init()
+        locationManager.delegate = self
     }
 
     func notifyLocationChanged() {
@@ -76,7 +79,6 @@ open class LocationServiceImpl: NSObject, LocationService, CLLocationManagerDele
     @available(iOS 9.0, *)
     public func requestOneTimeLocation() {
         guard CLLocationManager.locationServicesEnabled() == true else { return }
-        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestLocation()
     }
