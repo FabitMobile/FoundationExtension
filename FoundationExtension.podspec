@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FoundationExtension'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'foundation framework extensions'
   s.homepage         = 'https://github.com/FabitMobile/FoundationExtension.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
