@@ -2,7 +2,6 @@ import PromiseKit
 import UIKit
 import UserNotifications
 
-@available(iOS 10.0, *)
 public class UserNotificationServiceImpl: NSObject, UserNotificationService {
     var application: UIApplication
     var userNotificationCenter: UNUserNotificationCenter
@@ -137,37 +136,26 @@ public class UserNotificationServiceImpl: NSObject, UserNotificationService {
     }
 }
 
-@available(iOS 10.0, *)
 extension UserNotificationServiceImpl: UNUserNotificationCenterDelegate {
     public func userNotificationCenter(_: UNUserNotificationCenter,
                                        didReceive response: UNNotificationResponse,
                                        withCompletionHandler completionHandler: @escaping () -> Void) {
-        let notification = response.notification
-        var userInfo = notification.request.content.userInfo
-        userInfo["body"] = notification.request.content.body
-        let pushNotification = PushNotification(identifier: notification.request.identifier,
-                                                userInfo: userInfo)
+
         let completitions = PushNotificationsCompletions(forgroundCompletionHandler: nil,
                                                          backgroundCompletionHandler: completionHandler)
-        notificationHandlers.handle(pushNotification: pushNotification,
-                                    from: notification,
-                                    applicationState: application.applicationState,
-                                    completions: completitions)
+        notificationHandlers.map { $0.handle(from: response.notification,
+                                             applicationState: application.applicationState,
+                                             completions: completitions) }
     }
 
     // swiftlint:disable line_length
     public func userNotificationCenter(_ center: UNUserNotificationCenter,
                                        willPresent notification: UNNotification,
                                        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        var userInfo = notification.request.content.userInfo
-        userInfo["body"] = notification.request.content.body
-        let pushNotification = PushNotification(identifier: notification.request.identifier,
-                                                userInfo: userInfo)
-        notificationHandlers.handle(pushNotification: pushNotification,
-                                    from: notification,
-                                    applicationState: application.applicationState,
-                                    completions: PushNotificationsCompletions(forgroundCompletionHandler: completionHandler,
-                                                                              backgroundCompletionHandler: nil))
+        notificationHandlers.map { $0.handle(from: notification,
+                                            applicationState: application.applicationState,
+                                            completions: PushNotificationsCompletions(forgroundCompletionHandler: completionHandler,
+                                                                                      backgroundCompletionHandler: nil)) }
     }
 
     public func unregisterForRemoteNotifications() {

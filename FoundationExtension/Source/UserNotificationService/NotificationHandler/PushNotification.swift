@@ -1,12 +1,12 @@
 import Foundation
 import UserNotifications
 
-public struct PushNotification {
+public struct PushNotification<UserInfo: Codable> {
     public var identifier: String
-    public var userInfo: [AnyHashable: Any]
+    public var userInfo: UserInfo
 
     public init(identifier: String,
-                userInfo: [AnyHashable: Any]) {
+                userInfo: UserInfo) {
         self.identifier = identifier
         self.userInfo = userInfo
     }
