@@ -64,7 +64,7 @@ open class OAuth2ServiceImpl: BaseAuthServiceImpl, OAuth2Service {
 
     public func authHeader(currentDate: Date) -> [AnyHashable: Any]? {
         guard isAccessTokenValid(currentDate: currentDate) == true,
-            let credentials = credentials else { return nil }
+              let credentials = credentials else { return nil }
         return ["Authorization": "Bearer \(credentials.accessToken)"]
     }
 

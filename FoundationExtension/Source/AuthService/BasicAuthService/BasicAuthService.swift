@@ -31,7 +31,7 @@ class BasicAuthServiceImpl: BaseAuthServiceImpl, BasicAuthService {
 
     open var credentials: BasicAuthCredentials? {
         guard let login = userDefaults.object(forKey: kLastLogin) as? String,
-            let password = KeychainSwift().get(login)
+              let password = KeychainSwift().get(login)
         else { return nil }
         return BasicAuthCredentials(login: login,
                                     password: password)

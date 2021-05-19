@@ -6,7 +6,7 @@ public typealias DialogServicePickerCompletion = (_ index: Int, _ cancelled: Boo
 public typealias DialogServiceTextFieldConfigurator = (_ textField: UITextField) -> Void
 
 public struct DialogServiceStyle {
-    var backgroundColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+    var backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
     var contentColor: UIColor = .white
 
     public init() {}

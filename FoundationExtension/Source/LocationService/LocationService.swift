@@ -46,7 +46,7 @@ open class LocationServiceImpl: NSObject, LocationService, CLLocationManagerDele
         self.notificationCenter = notificationCenter
         locationManager = CLLocationManager()
         lastLocation = locationManager.location
-        
+
         super.init()
         locationManager.delegate = self
     }
@@ -95,7 +95,7 @@ open class LocationServiceImpl: NSObject, LocationService, CLLocationManagerDele
 
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations _: [CLLocation]) {
         if lastLocation?.coordinate.latitude != manager.location?.coordinate.latitude,
-            lastLocation?.coordinate.longitude != manager.location?.coordinate.longitude {
+           lastLocation?.coordinate.longitude != manager.location?.coordinate.longitude {
             lastLocation = manager.location
         }
     }

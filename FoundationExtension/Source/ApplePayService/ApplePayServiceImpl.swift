@@ -46,7 +46,6 @@ public class ApplePayServiceImpl: ApplePayService {
         } else if #available(iOS 10.0, *) {
             let transaction = ApplePayTransaction10(paymentRequest: request)
             return transaction
-
         }
         return nil
     }

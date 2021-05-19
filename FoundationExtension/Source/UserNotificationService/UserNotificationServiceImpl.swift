@@ -1,4 +1,3 @@
-import PromiseKit
 import UIKit
 import UserNotifications
 
@@ -140,22 +139,21 @@ extension UserNotificationServiceImpl: UNUserNotificationCenterDelegate {
     public func userNotificationCenter(_: UNUserNotificationCenter,
                                        didReceive response: UNNotificationResponse,
                                        withCompletionHandler completionHandler: @escaping () -> Void) {
-
         let completitions = PushNotificationsCompletions(forgroundCompletionHandler: nil,
                                                          backgroundCompletionHandler: completionHandler)
-        notificationHandlers.map { $0.handle(from: response.notification,
-                                             applicationState: application.applicationState,
-                                             completions: completitions) }
+        notificationHandlers.forEach { $0.handle(from: response.notification,
+                                                 applicationState: application.applicationState,
+                                                 completions: completitions) }
     }
 
     // swiftlint:disable line_length
     public func userNotificationCenter(_ center: UNUserNotificationCenter,
                                        willPresent notification: UNNotification,
                                        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        notificationHandlers.map { $0.handle(from: notification,
-                                            applicationState: application.applicationState,
-                                            completions: PushNotificationsCompletions(forgroundCompletionHandler: completionHandler,
-                                                                                      backgroundCompletionHandler: nil)) }
+        notificationHandlers.forEach { $0.handle(from: notification,
+                                                 applicationState: application.applicationState,
+                                                 completions: PushNotificationsCompletions(forgroundCompletionHandler: completionHandler,
+                                                                                           backgroundCompletionHandler: nil)) }
     }
 
     public func unregisterForRemoteNotifications() {
