@@ -17,7 +17,6 @@ public extension String {
     fileprivate func localizedKey(withCount count: Int) -> String {
         String(format: "%%d %@ (plural rule: %@)", self, TTTRussianPluralRuleForCount(count: count))
     }
-
 }
 
 // TTTLocalizedPluralString.m
@@ -49,8 +48,8 @@ private let kTTTFewPluralRule = "few"
 private let kTTTManyPluralRule = "many"
 private let kTTTOtherPluralRule = "other"
 
-public extension String {
-    fileprivate func TTTRussianPluralRuleForCount(count: Int) -> String {
+fileprivate extension String {
+    func TTTRussianPluralRuleForCount(count: Int) -> String {
         let mod10: Int = count % 10
         let mod100: Int = count % 100
         switch mod100 {

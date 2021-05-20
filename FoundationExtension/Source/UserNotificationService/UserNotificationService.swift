@@ -23,7 +23,6 @@ public protocol UserNotificationService: AnyObject {
                   body: String,
                   userInfo: [AnyHashable: Any]?)
 
-    @available(iOS 10.0, *)
     // sourcery: mirageSel=scheduleAvailableIOS10
     func schedule(identifier: String,
                   date: Date,
