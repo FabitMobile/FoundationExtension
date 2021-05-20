@@ -13,11 +13,6 @@ public protocol UserNotificationHandler {
 }
 
 open class BaseUserNotificationHandler<UserInfo: Codable>: UserNotificationHandler {
-    open func handle<UserInfo: Codable>(pushNotification: PushNotification<UserInfo>,
-                                        applicationState: UIApplication.State) -> Single<Void> {
-        fatalError("Not implemented")
-    }
-
     var disposeBag = DisposeBag()
 
     public init() {}
@@ -33,12 +28,21 @@ open class BaseUserNotificationHandler<UserInfo: Codable>: UserNotificationHandl
             let pushNotification = PushNotification<UserInfo>(identifier: systemNotification.request.identifier,
                                                               userInfo: userInfo)
             handle(pushNotification: pushNotification, applicationState: applicationState)
-                .do(onSuccess: { _ in
-                    completions?.forgroundCompletionHandler?(.badge)
-                    completions?.backgroundCompletionHandler?()
+                .do(onSuccess: { [weak self] _ in
+                    self?.callCompletions(for: systemNotification, completions: completions)
                 })
                 .subscribe()
                 .disposed(by: disposeBag)
         }
+    }
+
+    open func callCompletions(for systemNotification: UNNotification, completions: PushNotificationsCompletions?) {
+        completions?.forgroundCompletionHandler?(.badge)
+        completions?.backgroundCompletionHandler?()
+    }
+
+    open func handle<UserInfo: Codable>(pushNotification: PushNotification<UserInfo>,
+                                        applicationState: UIApplication.State) -> Single<Void> {
+        fatalError("Not implemented")
     }
 }
