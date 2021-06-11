@@ -41,8 +41,8 @@ open class BaseUserNotificationHandler<UserInfo: Codable>: UserNotificationHandl
         completions?.backgroundCompletionHandler?()
     }
 
-    open func handle<UserInfo: Codable>(pushNotification: PushNotification<UserInfo>,
-                                        applicationState: UIApplication.State) -> Single<Void> {
+    open func handle(pushNotification: PushNotification<UserInfo>,
+                     applicationState: UIApplication.State) -> Single<Void> {
         fatalError("Not implemented")
     }
 }
