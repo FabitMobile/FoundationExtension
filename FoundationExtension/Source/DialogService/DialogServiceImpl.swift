@@ -21,6 +21,7 @@ open class DialogServiceImpl: NSObject, DialogService, UIPickerViewDataSource, U
     var vOverlay: UIView?
     var picker: UIPickerView?
     var pickerView: UIView?
+    var customDialogView: UIView?
     var pickerPosition: CGFloat?
     var pickerIndexChanged: DialogServicePickerIndexChanged?
     var pickerCompletion: DialogServicePickerCompletion?
@@ -409,6 +410,66 @@ open class DialogServiceImpl: NSObject, DialogService, UIPickerViewDataSource, U
     func overlayDidTap(_: UIGestureRecognizer) {
         cancelPicker()
     }
+    
+    // MARK: - Custom alerts
+    
+    public func showCustomDialog(with content: UIView) {
+        
+        guard let viewController = topViewController else { return }
+        
+        // Setup overlay
+        vOverlay = UIView(frame: UIScreen.main.bounds)
+        vOverlay?.backgroundColor = .black
+        vOverlay?.alpha = 0.0
+        vOverlay?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideCustomDialog)))
+        
+        // Setup dialog view
+        let horizonalPadding: CGFloat = 16
+        let squareWidth: CGFloat = UIScreen.main.bounds.width - (horizonalPadding * 2)
+        let contentSize = CGSize(width: squareWidth, height: squareWidth)
+        let topSafeAreaInset = safeAreaTopInset(for: viewController)
+        let position = CGPoint(x: horizonalPadding, y: 32 + topSafeAreaInset)
+        
+        customDialogView = UIView(frame: CGRect(origin: position, size: contentSize))
+        customDialogView?.backgroundColor = .white
+        customDialogView?.alpha = 0
+        customDialogView?.layer.cornerRadius = 6
+        customDialogView?.clipsToBounds = true
+        
+        // Setup dismiss button
+        let buttonSize = CGSize(width: 30, height: 30)
+        let buttonPosition = CGPoint(x: contentSize.width - buttonSize.width - 12, y: 12)
+        let dismissButton = configureCloseButton(frame: CGRect(origin: buttonPosition, size: buttonSize))
+        
+        // Add content and close button to dialog view
+        content.frame = CGRect(origin: .zero, size: customDialogView!.frame.size)
+        customDialogView?.addSubview(content)
+        customDialogView?.addSubview(dismissButton)
+        
+        // Add dialog to main view
+        viewController.view.addSubview(vOverlay!)
+        viewController.view.addSubview(customDialogView!)
+        
+        // Showing with animation
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.vOverlay?.alpha = 0.3
+            self?.customDialogView?.alpha = 1
+        }
+    }
+    
+    @objc
+    open func hideCustomDialog() {
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.vOverlay?.alpha = 0
+            self?.customDialogView?.alpha = 0
+        } completion: { [weak self] _ in
+            self?.vOverlay?.removeFromSuperview()
+            self?.customDialogView?.removeFromSuperview()
+            self?.vOverlay = nil
+            self?.customDialogView = nil
+        }
+
+    }
 
     // MARK: - UIPickerViewDataSource
 
@@ -454,5 +515,41 @@ open class DialogServiceImpl: NSObject, DialogService, UIPickerViewDataSource, U
 
     open func showShareDialog(items: [DialogServiceShareItem]) {
         showShareDialog(items: items, style: DialogServiceStyle())
+    }
+    
+    // MARK: - Private
+    private func safeAreaTopInset(for viewController: UIViewController?) -> CGFloat {
+        guard let viewController = viewController else { return 0 }
+        
+        if #available(iOS 11.0, *) {
+            return viewController.view.safeAreaInsets.top
+        } else {
+            return viewController.topLayoutGuide.length
+        }
+    }
+    
+    private func configureCloseButton(frame: CGRect) -> UIButton {
+        
+        var button: UIButton?
+        
+        if #available(iOS 13.0, *) {
+            button = UIButton(type: .system)
+            button?.frame = frame
+            button?.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+            button?.contentVerticalAlignment = .fill
+            button?.contentHorizontalAlignment = .fill
+            button?.tintColor = UIColor(hue: 0, saturation: 0, brightness: 0.8, alpha: 1)
+        } else {
+            button = UIButton(frame: frame)
+            button?.setTitle("×", for: .normal)
+            button?.setTitleColor(.white, for: .normal)
+            button?.layer.masksToBounds = true
+            button?.layer.cornerRadius = 15
+            button?.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.8, alpha: 1)
+        }
+        
+        button?.addTarget(self, action: #selector(hideCustomDialog), for: .touchUpInside)
+        
+        return button!
     }
 }

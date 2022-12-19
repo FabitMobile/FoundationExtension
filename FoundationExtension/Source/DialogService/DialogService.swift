@@ -61,6 +61,11 @@ public protocol DialogService {
     // MARK: - share
 
     func showShareDialog(items: [DialogServiceShareItem])
+    
+    // MARK: - Custom alerts
+    
+    func showCustomDialog(with content: UIView)
+    func hideCustomDialog()
 }
 
 public protocol DialogServiceShareItem {}
