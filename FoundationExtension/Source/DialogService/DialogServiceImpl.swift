@@ -424,7 +424,7 @@ open class DialogServiceImpl: NSObject, DialogService, UIPickerViewDataSource, U
         vOverlay?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideCustomDialog)))
         
         // Setup dialog view
-        let horizonalPadding: CGFloat = 16
+        let horizontalPadding: CGFloat = 16
         let squareWidth: CGFloat = UIScreen.main.bounds.width - (horizonalPadding * 2)
         let contentSize = CGSize(width: squareWidth, height: squareWidth)
         let topSafeAreaInset = safeAreaTopInset(for: viewController)
